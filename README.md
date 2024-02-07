@@ -9,6 +9,8 @@ This is a simple Employee Management System built using Django.
 - Delete employees
 - Update employee information
 
+## Database used : DB.SQLITE  
+
 ## Screenshots
 1] Home page
 ![image](https://github.com/Makarand41/Django-Employee-Management-System/assets/90332486/fcbb8f91-16aa-40c7-be66-197e7de8af86)
