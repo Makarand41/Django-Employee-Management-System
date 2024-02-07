@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+
+        .container {
+            height: 250px;
+            width: 350px;
+            background-color: beige;
+            margin-top: 100px;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 15px;
+
+        }
+
+        .heading {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .submit-button {
+            margin-top: 10px;
+        }
+
+
+          .container label {
+            min-width: 100px; /* Adjust as needed */
+
+        }
+
+        .container div{
+            display: flex;
+        }
+
+        .c2{
+        margin-right:260px;
+        margin-left:820px
+        }
+
+    </style>
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <h1 class="heading">Add new employee</h1>
+        <form method="post" action="/add/">
+            {% csrf_token %}
+            <div>
+                <label for="name">Name:</label>
+            <input type="text" name="name" required><br>
+            </div>
+
+             <div>
+                 <label for="phone">Phone:</label>
+            <input type="tel" name="phone" required><br>
+            </div>
+
+
+
+             <div>
+                <label for="address">Address:</label>
+            <input type="text" name="address" required><br>
+            </div>
+
+
+
+
+
+             <div>
+                 <label for="working">Working:</label>
+            <input type="checkbox" name="working" checked><br>
+            </div>
+
+
+
+             <div>
+                <label for="department">Department:</label>
+                <select name="department" required>
+                    <option value="computer">Computer</option>
+                    <option value="mech">Mechanical</option>
+                    <option value="civil">Civil</option>
+                </select><br>
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+<div class="c2">
+    <a href="/">CLick here to go back</a>
+</div>
+</body>
+</html>
